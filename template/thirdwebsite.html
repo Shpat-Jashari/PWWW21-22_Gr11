@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/default.css" />
         <link rel="stylesheet" href="/styles/thirdwebsite/thirdwebsite.css" />
+        <script src="/js/thirdwebsite/thirdwebsite.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -79,7 +80,37 @@
             </nav>
         </header>
 
-        <main class="container"></main>
+        <main class="container">
+            <div class="form-container">
+                <form action="http://www.randyconnolly.com/tests/process.php" id="contact-form">
+                    <div class="contact-input">
+                        <div class="fname-field">
+                            <label id="fname-label" for="fname" class="input-name">First Name</label>
+                            <input id="fname" type="text" onblur="onBlur('fname','fname-label')" onfocus="onFocus('fname-label')"
+                                id="fname" placeholder="First Name" class="input input-text" name="fname" />
+                        </div>
+                        <div class="lname-field">
+                            <label id="lname-label" for="lname" class="input-name">Last Name</label>
+                            <input id="lname" type="text" onblur="onBlur('lname','lname-label')" onfocus="onFocus('lname-label')"
+                                id="lname" placeholder="Last Name" class="input input-text" name="lname" />
+                        </div>
+                        <div class="email-field">
+                            <label id="email-label" for="email" class="input-name">Email</label>
+                            <input id="email" type="email" onblur="onBlur('email','email-label')" onfocus="onFocus('email-label')"
+                                id="email" placeholder="Email" class="input input-text" name="email" />
+                        </div>
+            
+                        <div class="message-field">
+                            <label id="message-label" for="message" class="input-name">Message</label>
+                            <textarea id="message" type="text" onblur="onBlur('message','message-label')"
+                                onfocus="onFocus('message-label')" id="message" placeholder="Message" class="input input-text"
+                                name="message"></textarea>
+                        </div>
+                        <input class="submit-button button" type="submit" value="Submit" />
+                    </div> 
+                </form>
+            </div>
+        </main>
 
         <footer>
             <div class="footer-title">
