@@ -1,24 +1,19 @@
-function onFocus(label){
-    var l = document.getElementById(label);
-    l.style.color = "#5f8b86";
-    l.style.backgroundColor = "#5f5f5f";
-}
+// const emailText = document.getElementById("email");
+// const submitButton = document.querySelector(".submit-button");
 
-function onBlur(input, label){
-    var l = document.getElementById(label);
-    var i = document.getElementById(input);
-    if(i.value.length == 0){
-        l.style.color = "transparent";
-        l.style.background = "transparent";
-    }
-}
-
-function validateEmail(mail) 
+function validateEmail(email) 
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+    
+console.log(email.value);
+ if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value))
   {
+    console.log("asdas");
     return (true)
-  }
+  }else{
+    console.log("else");
     alert("You have entered an invalid email address!")
-    return (false)
+  }
 }
+
+// validateEmail(emailText.value)
+submitButton.addEventListener("click", validateEmail(emailText))
